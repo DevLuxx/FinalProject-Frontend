@@ -1,3 +1,11 @@
 <section>  
 </section>
-<p>plants works!</p>
+<h1>Plants Component</h1>
+
+@if (plants$ | async; as TrefleInfo) {
+    <img src={{TrefleInfo.image_url}}>
+    } @else {
+      <p>This code is fucking broken!</p>
+
+      <!-- Yeah this code is definitely fucking broken -->
+    }
