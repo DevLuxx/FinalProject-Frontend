@@ -12,6 +12,8 @@ import { RouterModule } from '@angular/router';
 })
 export class PlantsComponent {
   constructor(private plantsService: PlantsService){}
-  plants$ = this.plantsService.getPlants();
+  
+    plants$ = this.plantsService.getPlants();
+
 
 }
