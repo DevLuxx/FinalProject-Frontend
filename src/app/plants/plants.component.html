@@ -1,11 +1,13 @@
-<section>  
-</section>
-<h1>Plants Component</h1>
+<ul>
 
-@if (plants$ | async; as TrefleInfo) {
-    <img src={{TrefleInfo.image_url}}>
-    } @else {
-      <p>This code is fucking broken!</p>
-
-      <!-- Yeah this code is definitely fucking broken -->
-    }
+    <li *ngFor="let plant of plants$ | async">
+        {{plant.trefleID}}
+        {{ plant.plantName }}
+        {{plant.quantity}}       
+        
+    
+    </li>
+  </ul>
+  
+<p>plants works!</p>
+=

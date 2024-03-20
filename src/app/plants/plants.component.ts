@@ -14,25 +14,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 })
 export class PlantsComponent {
 
-  constructor(private plantsService: PlantsService, private route: ActivatedRoute, private activatedRoute: ActivatedRoute){}
-
-  routeSubscription!: Subscription;
-  querySubscription!: Subscription;
-  id = parseInt(this.route.snapshot.paramMap.get('id')!, 10); //Just pass a number in here to see if it actually works
-  params$ = this.activatedRoute.params;
-  queryParams$ = this.activatedRoute.queryParams;
-  plants$ = this.plantsService.getTrefleInfo(this.id);
-
-  ngOnInit(): void {
-    this.routeSubscription = this.activatedRoute.params.subscribe(params => {
-      this.id = params['id'];
-    })
-  }
-
-  ngOnDestroy(): void {
-
-    this.routeSubscription.unsubscribe();
-    this.querySubscription.unsubscribe();
-  }
-
+  constructor(private plantsService: PlantsService){}
+  
+    plants$ = this.plantsService.getPlants();
 }
