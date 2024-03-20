@@ -17,4 +17,5 @@ export class PlantsComponent {
   constructor(private plantsService: PlantsService){}
   
     plants$ = this.plantsService.getPlants();
+
 }
