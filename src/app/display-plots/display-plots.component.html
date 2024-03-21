@@ -1,36 +1,124 @@
-<!-- @if (plants$ | async; as plants) {
-	<table>
-	  <thead>
-		<tr>
-		  <th>Garden Plot 1</th>
-		</tr>
-	  </thead>
-	  <tbody>
-	  <tbody>
-	  <tbody>
-		@for (plant of plants; track plant.id) {
-		  <tr>
-			<td>{{ plant.id }}</td>
-
-			</td>			
-			<td>
-				<button (click)="routeToPlot(plant.id)">Plant Details</button>
-			</td>
-			<td>
-				<button (click)="updatePlant(plant.id, ticket)">Update Plant</button>
-			</td>
-			<td>
-				<button (click)="deletePlant(plant.id)">🗑️</button>
-			</td>
-			<td>
-				<button (click)="addPlant(plant.id)">🌱</button>
-			</td>
-		  </tr>
-		}
-	  </tbody>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Garden Plot</title>
+	</head>
+	<body>
+	
+	<h2>Choose what you'd like to plant!</h2>
+	
+	<table border="1">
+	  <tr>
+		<th colspan="5">Garden Plot 1</th>
+	  </tr>
+	  <tr>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+	  </tr>
+	  <tr>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+	  </tr>
+	  <tr>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+	  </tr>
+	  <tr>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+	  </tr>
 	</table>
-  } @else { 
-	<div>
-	  <h2>Loading plants...</h2>
-	</div>
-  } -->
+
+	<body> 
+
+		-------------------------------------------------------------
+
+	</body>
+	
+	<table border="1">
+	  <tr>
+		<th colspan="5">Garden Plot 2</th>
+	  </tr>
+	  <tr>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+	  </tr>
+	  <tr>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+	  </tr>
+	  <tr>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+	  </tr>
+	  <tr>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+	  </tr>
+	</table>
+
+	<body> 
+
+		-------------------------------------------------------------
+
+	</body>
+	
+	<table border="1">
+	  <tr>
+		<th colspan="5">Garden Plot 3</th>
+	  </tr>
+	  <tr>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+	  </tr>
+	  <tr>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+	  </tr>
+	  <tr>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+	  </tr>
+	  <tr>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+		<td><span></span><br><button>🌱</button><button>🌸</button></td>
+	  </tr>
+	</table>
+	
+	</body>
