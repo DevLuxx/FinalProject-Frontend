@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PlantsComponent } from './plants/plants.component';
+import { DisplayPlotsComponent } from './display-plots/display-plots.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, PlantsComponent,CommonModule],
+  imports: [RouterOutlet, PlantsComponent,CommonModule, DisplayPlotsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

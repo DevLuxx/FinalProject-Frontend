@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { PlotService } from '../Services/plot.service';
+import { CommonModule } from '@angular/common';
+import { PlantsService } from '../Services/plants.service';
 
 @Component({
   selector: 'app-display-plots',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './display-plots.component.html',
   styleUrl: './display-plots.component.css'
 })
