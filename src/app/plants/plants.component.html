@@ -1,13 +1,12 @@
+<h2>
+  Hey gardner, here are your available seeds.
+</h2>
 <ul>
-
-    <li *ngFor="let plant of plants$ | async">
-        {{plant.trefleID}}
-        {{ plant.plantName }}
-        {{plant.quantity}}       
-        
-    
-    </li>
-  </ul>
+    <li *ngFor="let plant of plants$ | async">      
+        {{ plant.plantName }}:
+        {{plant.quantity}} Seeds
+        <button (click)="addToPlot"> add to plot🪴</button>
+    </li>   
+</ul>
   
-<p>plants works!</p>
-=
+

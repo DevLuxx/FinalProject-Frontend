@@ -23,6 +23,7 @@ export class PlantsService {
     return this.httpClient.get<Plant[]>(this.plantsAPI)
   }
 
+  
   getPlot1all() {
     // httpClient.get means this method will be making an http GET request!
     return this.httpClient.get<Plot[]>(this.plot1API)
