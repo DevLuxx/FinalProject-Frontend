@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Observable, Subscription } from 'rxjs';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { Plot } from '../interfaces/plot';
 
 @Component({
   selector: 'app-plants',
@@ -17,5 +18,8 @@ export class PlantsComponent {
   constructor(private plantsService: PlantsService){}
   
     plants$ = this.plantsService.getPlants();
-
+ 
+    addToPlot(id: Plot){
+      this.plantsService.addPlot1(id);
+    }
 }
