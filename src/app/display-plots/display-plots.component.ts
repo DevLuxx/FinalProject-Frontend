@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PlantsService } from '../Services/plants.service';
+import { PlotsService } from '../Services/plots.service';
+import { BrowserModule } from '@angular/platform-browser';
+
 import { RouterModule } from '@angular/router';
 
 
@@ -31,7 +33,7 @@ export class DisplayPlotsComponent {
   //   })
   // }
 
-  // updatePlant(id: number, plant: PlantModel) {
+  // updatePlant(id: number, plant: Plant) {
   //   this.router.navigate(['update-plant', id], { queryParams: plant });
   // }
 
