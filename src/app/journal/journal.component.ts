@@ -1,0 +1,22 @@
+import { Component, OnDestroy, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { PlantsService } from '../Services/plants.service';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { Observable, Subscription } from 'rxjs';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { Journal } from '../interfaces/journal';
+
+@Component({
+  selector: 'app-journal',
+  standalone: true,
+  imports: [CommonModule, RouterModule, HttpClientModule],
+  templateUrl: './journal.component.html',
+  styleUrl: './journal.component.css'
+})
+export class JournalComponent {
+
+  constructor(private plantsService: PlantsService){}
+
+  $journals = this.plantsService.getJournalsall();
+
+}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PlotsService } from '../Services/plots.service';
+import { PlantsService } from '../Services/plants.service';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { RouterModule } from '@angular/router';
@@ -16,6 +16,13 @@ import { RouterModule } from '@angular/router';
   styleUrl: './display-plots.component.css'
 })
 export class DisplayPlotsComponent {
+
+
+  constructor(private plantsService: PlantsService){}
+
+  plot1$ = this.plantsService.getPlot1all();
+  plot2$ = this.plantsService.getPlot2all();
+  plot3$ = this.plantsService.getPlot3all();
 
   // constructor(
   //   private plotService: PlotService,

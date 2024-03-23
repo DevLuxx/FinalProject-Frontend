@@ -1,0 +1,13 @@
+<h1>Gardner's Journal</h1>
+<h2>Keep track of your progress here.</h2>
+
+@if ($journals | async; as Journal) {
+    <ul>
+      @for (entry of Journal; track entry.Date) {
+
+        <li> {{entry.Date}} </li>
+        <li> {{entry.Gardener}} </li>
+        <li> {{entry.Notes}} </li>
+  }
+</ul>
+}

@@ -11,114 +11,120 @@
 	  <tr>
 		<th colspan="5">Garden Plot 1</th>
 	  </tr>
+	  @if (plot1$ | async; as plot1) {
 	  <tr>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-	  </tr>
-	  <tr>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-	  </tr>
-	  <tr>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-	  </tr>
-	  <tr>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-	  </tr>
+		@for (plot of plot1; track plot.ID) {
+			@if (plot.plotSpace < 6) {
+		<td><span></span>{{ plot.plantName }}<br><button onclick="plant('seed')">Update🌱</button></td>
+	}
+}
+	</tr>
+	<tr>
+		@for (plot of plot1; track plot.ID) {
+			@if (plot.plotSpace >= 6 && plot.plotSpace < 11) {
+		<td><span></span>{{ plot.plantName }}<br><button onclick="plant('seed')">Update🌱</button></td>
+	}
+}
+	</tr>
+	<tr>
+		@for (plot of plot1; track plot.ID) {
+			@if (plot.plotSpace >= 11 && plot.plotSpace < 16) {
+		<td><span></span>{{ plot.plantName }}<br><button onclick="plant('seed')">Update🌱</button></td>
+	}
+}
+	</tr>
+	<tr>
+		@for (plot of plot1; track plot.ID) {
+			@if (plot.plotSpace >= 16 && plot.plotSpace < 21) {
+		<td><span></span>{{ plot.plantName }}<br><button onclick="plant('seed')">Update🌱</button></td>
+	}
+}
+	</tr>
+
+	}
 	</table>
+
+	<body>
+	</body>
+	<table border="1">
+		<tr>
+		  <th colspan="5">Garden Plot 2</th>
+		</tr>
+		@if (plot2$ | async; as plot2) {
+		<tr>
+		  @for (plot of plot2; track plot.ID) {
+			  @if (plot.plotSpace < 6) {
+		  <td><span></span>{{ plot.plantName }}<br><button onclick="plant('seed')">Update🌱</button></td>
+	  }
+  }
+	  </tr>
+	  <tr>
+		  @for (plot of plot2; track plot.ID) {
+			  @if (plot.plotSpace >= 6 && plot.plotSpace < 11) {
+		  <td><span></span>{{ plot.plantName }}<br><button onclick="plant('seed')">Update🌱</button></td>
+	  }
+  }
+	  </tr>
+	  <tr>
+		  @for (plot of plot2; track plot.ID) {
+			  @if (plot.plotSpace >= 11 && plot.plotSpace < 16) {
+		  <td><span></span>{{ plot.plantName }}<br><button onclick="plant('seed')">Update🌱</button></td>
+	  }
+  }
+	  </tr>
+	  <tr>
+		  @for (plot of plot2; track plot.ID) {
+			  @if (plot.plotSpace >= 16 && plot.plotSpace < 21) {
+		  <td><span></span>{{ plot.plantName }}<br><button onclick="plant('seed')">Update🌱</button></td>
+	  }
+  }
+	  </tr>
+  
+	  }
+	  </table>
+  
 
 	<body> 
 
-		-------------------------------------------------------------
 
 	</body>
 	
 	<table border="1">
-	  <tr>
-		<th colspan="5">Garden Plot 2</th>
+		<tr>
+		  <th colspan="5">Garden Plot 3</th>
+		</tr>
+		@if (plot3$ | async; as plot3) {
+		<tr>
+		  @for (plot of plot3; track plot.ID) {
+			  @if (plot.plotSpace < 6) {
+		  <td><span></span>{{ plot.plantName }}<br><button onclick="plant('seed')">Update🌱</button></td>
+	  }
+  }
 	  </tr>
 	  <tr>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
+		  @for (plot of plot3; track plot.ID) {
+			  @if (plot.plotSpace >= 6 && plot.plotSpace < 11) {
+		  <td><span></span>{{ plot.plantName }}<br><button onclick="plant('seed')">Update🌱</button></td>
+	  }
+  }
 	  </tr>
 	  <tr>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
+		  @for (plot of plot3; track plot.ID) {
+			  @if (plot.plotSpace >= 11 && plot.plotSpace < 16) {
+		  <td><span></span>{{ plot.plantName }}<br><button onclick="plant('seed')">Update🌱</button></td>
+	  }
+  }
 	  </tr>
 	  <tr>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
+		  @for (plot of plot3; track plot.ID) {
+			  @if (plot.plotSpace >= 16 && plot.plotSpace < 21) {
+		  <td><span></span>{{ plot.plantName }}<br><button onclick="plant('seed')">Update🌱</button></td>
+	  }
+  }
 	  </tr>
-	  <tr>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-	  </tr>
-	</table>
-
-	<body> 
-
-		-------------------------------------------------------------
-
-	</body>
-	
-	<table border="1">
-	  <tr>
-		<th colspan="5">Garden Plot 3</th>
-	  </tr>
-	  <tr>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-	  </tr>
-	  <tr>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-	  </tr>
-	  <tr>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-	  </tr>
-	  <tr>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-		<td><span></span><br><button onclick="plant('seed')">🌱</button><button onclick="plant('flower')">🌸</button></td>
-	  </tr>
-	</table>
+  
+	  }
+	  </table>
+  
 	
 	</body>
