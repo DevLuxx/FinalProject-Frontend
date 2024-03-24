@@ -1,6 +1,7 @@
 export interface Plot {
-    ID: number,
-    plantID: number,
+    id: number,
+    plantId: number,
     plantName: string,
-    plotSpace: number
+    plotSpace: number,
+    plotId: number
 }

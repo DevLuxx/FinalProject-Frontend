@@ -5,12 +5,12 @@
   @if (plants$ | async; as plants) {
     <table border="1">
     <th>Plant Name</th><th>Available Seeds</th>
-    @for (plant of plants; track plant.ID) {
+    @for (plant of plants; track plant.id) {
   <tr>
         <td>{{ plant.plantName }}</td>
         <td>{{plant.quantity}}
-          <button (click)="increment(plant, plant.quantity)" >➕</button>
-          <button (click)="decrement(plant, plant.quantity)" >➖</button>
+          <button (click)="increment(plant)" >➕</button>
+          <button (click)="decrement(plant)" >➖</button>
         </td>
   </tr>
   }

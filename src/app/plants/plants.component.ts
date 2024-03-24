@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { PlantsService } from '../Services/plants.service';
+import { TrefleService } from '../Services/trefle.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Observable, Subscription } from 'rxjs';
@@ -16,22 +17,22 @@ import { Plant } from '../interfaces/plant';
 })
 export class PlantsComponent {
 
-  constructor(private plantsService: PlantsService){}
+  constructor(private plantsService: PlantsService, private trefleService: TrefleService){}
 
   id = 269338;
 
   plants$ = this.plantsService.getPlantsall();
-  trefle$ = this.plantsService.getTrefle(this.id);
+  trefle$ = this.trefleService.getTrefle(this.id);
 
     @Input() value = 0;
 
-    increment(plant: Plant, quantity: number) {
-      this.plantsService.updatePlant(plant, quantity)
-      quantity++;
+    increment(plant: Plant) {
+      plant.quantity++;
+      this.plantsService.updatePlant(plant);   
     }
 
-    decrement(plant: Plant, quantity: number) {
-      this.plantsService.updatePlant(plant, quantity)
-      quantity--;
+    decrement(plant: Plant) {  
+      plant.quantity--;    
+      this.plantsService.updatePlant(plant);  
     }
 }

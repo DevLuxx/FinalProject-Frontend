@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, EventEmitter, Input, Output } from '@angular/core';
-import { PlantsService } from '../Services/plants.service';
+import { JournalService } from '../Services/journal.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Observable, Subscription } from 'rxjs';
@@ -15,8 +15,8 @@ import { Journal } from '../interfaces/journal';
 })
 export class JournalComponent {
 
-  constructor(private plantsService: PlantsService){}
+  constructor(private journalService: JournalService){}
 
-  $journals = this.plantsService.getJournalsall();
+  $journals = this.journalService.getJournalsall();
 
 }
