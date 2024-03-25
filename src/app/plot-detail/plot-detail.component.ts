@@ -58,11 +58,11 @@ export class PlotDetailComponent implements OnInit{
   updatePlot() {
     const updatedPlot = {
       id: this.plotItem.id,
-      plantId: this.plotItem.plantId,
+      plantId: +this.plotItem.plantId,
       plantName: this.plotItem.plantName,
       plotSpace: this.plotItem.plotSpace,
       plotId: this.plotItem.plotId,
     };
-  this.plotsService.updatePlot(this.plotItem.plotSpace, this.plotItem.plantId).subscribe();
+  this.plotsService.updatePlot(updatedPlot.plotSpace, updatedPlot.plantId).subscribe();
 }
 }

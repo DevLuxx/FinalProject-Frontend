@@ -25,7 +25,7 @@ export class PlotsService {
   }
 
   updatePlot(plotSpaceId: number, plantId: number) {
-    return this.httpClient.put(`${this.plotsAPI}/${plotSpaceId}/{plantId}`, {});
+    return this.httpClient.put(`${this.plotsAPI}/${plotSpaceId}/${plantId}`, {});
   }
 
 }
