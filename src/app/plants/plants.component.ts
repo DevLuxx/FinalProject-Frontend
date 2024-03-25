@@ -7,6 +7,7 @@ import { Observable, Subscription } from 'rxjs';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Plot } from '../interfaces/plot';
 import { Plant } from '../interfaces/plant';
+import { TrefleInfo } from '../interfaces/trefle-info';
 
 @Component({
   selector: 'app-plants',
@@ -19,20 +20,18 @@ export class PlantsComponent {
 
   constructor(private plantsService: PlantsService, private trefleService: TrefleService){}
 
-  id = 269338;
-
+  id: number = 0;
   plants$ = this.plantsService.getPlantsall();
-  trefle$ = this.trefleService.getTrefle(this.id);
 
     @Input() value = 0;
 
     increment(plant: Plant) {
       plant.quantity++;
-      this.plantsService.updatePlant(plant);   
+      this.plantsService.updatePlant(plant);
     }
 
-    decrement(plant: Plant) {  
-      plant.quantity--;    
-      this.plantsService.updatePlant(plant);  
+    decrement(plant: Plant) {
+      plant.quantity--;
+      this.plantsService.updatePlant(plant);
     }
-}
+  }

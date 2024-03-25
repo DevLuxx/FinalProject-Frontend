@@ -1,34 +1,35 @@
 <h2>
-  Hey gardner! Here are your available seeds:
+  Hey Gardener! Here are your plants:
 </h2>
 <ul>
   @if (plants$ | async; as plants) {
     <table border="1">
-    <th>Plant Name</th><th>Available Seeds</th>
+    <th>Plant Name</th><th>Available Seeds</th><th>Scientific Name</th><th>Vegetable?</th><th>Image</th>
     @for (plant of plants; track plant.id) {
   <tr>
         <td>{{ plant.plantName }}</td>
-        <td>{{plant.quantity}}
+        <td>{{ plant.quantity }}
           <button (click)="increment(plant)" >➕</button>
           <button (click)="decrement(plant)" >➖</button>
         </td>
+        <td>{{ plant.scientificName }}</td>
+        @if (plant.vegetable == true) {
+          <td>Yes</td>
+        }
+        @else {
+          <td>No</td>
+        }
+        <td><img src={{plant.imageURL}}></td>
+
+
+
+
+
+        <!--Refactor this code to make all the calls on the back end so this code isn't a nightmare-->
+        <!--Refactor this code to make all the calls on the back end so this code isn't a nightmare-->
+
   </tr>
   }
 </table>
   }
-
-<h2>Plant Info</h2>
-@if (trefle$ | async; as trefle) {
-  <b>Common name:</b> {{trefle.common_name}}
-  <p><b>Scientific name: </b>{{trefle.scientific_name}}</p>
-  @if (trefle.vegetable == false) {
-    <p>This is a <b>flower</b>.</p>
-  }
-  @else {
-    <p>This is a <b>vegetable</b>.</p>
-  }
-  <b>Image:</b>
-  <br>
-  <img src="{{trefle.image_url}}">
-}
 

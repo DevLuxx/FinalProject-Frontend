@@ -1,5 +1,14 @@
 <p>Indvidual ID of this exact item, unique to a plot AND the index inside that plot: {{ plotItem?.id }}</p>
-<p>PlantID: {{ plotItem?.plantId }}</p>
-<p>Plant Name: {{ plotItem?.plantName }}</p>
 <p>Which plot: {{ plotItem?.plotId }}</p>
 <p>Which space in the plot: {{ plotItem?.plotSpace }}</p>
+
+<form (ngSubmit)="updatePlot()">
+
+<div class="form-group">
+    <label for="plantId">Plant ID:</label>
+    <input type="number" id="plantId" [(ngModel)]="plotItem.plantId" name="plantId" required>
+</div>
+
+<button type="submit">Update🌱</button>
+
+</form>

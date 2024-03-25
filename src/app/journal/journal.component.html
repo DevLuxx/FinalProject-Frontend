@@ -3,11 +3,11 @@
 
 @if ($journals | async; as Journal) {
     <ul>
-      @for (entry of Journal; track entry.Date) {
+      @for (journal of Journal; track journal.date) {
 
-        <li> {{entry.Date}} </li>
-        <li> {{entry.Gardener}} </li>
-        <li> {{entry.Notes}} </li>
+        <li> {{journal.date}} </li>
+        <li> {{journal.gardener}} </li>
+        <li> {{journal.notes}} </li>
   }
 </ul>
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, importProvidersFrom } from '@angular/core';
+import { Component, OnInit, importProvidersFrom, numberAttribute } from '@angular/core';
 import { PlantsService } from '../Services/plants.service';
 import { TrefleService } from '../Services/trefle.service';
 import { ActivatedRoute } from '@angular/router';
@@ -6,11 +6,12 @@ import { Subscription } from 'rxjs';
 import { Plot } from '../interfaces/plot';
 import { Plant } from '../interfaces/plant';
 import { PlotsService } from '../Services/plots.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-plot-detail',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './plot-detail.component.html',
   styleUrl: './plot-detail.component.css'
 })
@@ -22,7 +23,13 @@ export class PlotDetailComponent implements OnInit{
     private activatedRoute: ActivatedRoute){}
 
   paramsSubscription!: Subscription;
-  plotItem: Plot | null = null;
+  plotItem = {
+    id: 0,
+    plantId: 0,
+    plantName: "",
+    plotSpace: 0,
+    plotId: 0
+  };
   plants: Plant[] | null = null;
 
   ngOnInit(): void {
@@ -32,7 +39,13 @@ export class PlotDetailComponent implements OnInit{
       const id = params['id'];
 
       this.plotsService.getPlotItem(id).subscribe(plotItem => {
-        this.plotItem = plotItem;
+        this.plotItem = {
+          id: plotItem.id,
+          plantId: plotItem.plantId,
+          plantName: plotItem.plantName,
+          plotSpace: plotItem.plotSpace,
+          plotId: plotItem.plotId,
+        };
       });
 
       this.plantsService.getPlantsall().subscribe(plants => {
@@ -41,4 +54,15 @@ export class PlotDetailComponent implements OnInit{
 
     })
   }
+
+  updatePlot() {
+    const updatedPlot = {
+      id: this.plotItem.id,
+      plantId: this.plotItem.plantId,
+      plantName: this.plotItem.plantName,
+      plotSpace: this.plotItem.plotSpace,
+      plotId: this.plotItem.plotId,
+    };
+  this.plotsService.updatePlot(this.plotItem.plotSpace, this.plotItem.plantId).subscribe();
+}
 }

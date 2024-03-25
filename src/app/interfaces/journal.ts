@@ -1,6 +1,6 @@
 export interface Journal {
-    ID: number;
-    Date: Date;
-    Gardener: string;
-    Notes: string;
+    id: number;
+    date: Date;
+    gardener: string;
+    notes: string;
 }
