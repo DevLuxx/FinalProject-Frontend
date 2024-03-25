@@ -1,20 +1,31 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment.development';
+import { Plot } from '../interfaces/plot';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlotsService {
+  constructor(private httpClient: HttpClient) { }
 
-  private baseUrl = 'https://MyApp.com/api';
+  plotsAPI = `${environment.apiDomain}/api/plots`;
 
-  constructor(private http: HttpClient) { }
-  fetchData(): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/data`);
+  getAllPlots() {
+    return this.httpClient.get<Plot[]>(this.plotsAPI)
   }
+
+  getPlotContents(plotId: number): Observable<Plot> {
+    return this.httpClient.get<Plot>(`${this.plotsAPI}/${plotId}`);
+  }
+
+  getPlotItem(id: number): Observable<Plot> {
+    return this.httpClient.get<Plot>(`${this.plotsAPI}/plotitem/${id}`);
+  }
+
+  updatePlot(plotSpaceId: number, plantId: number) {
+    return this.httpClient.put(`${this.plotsAPI}/${plotSpaceId}/{plantId}`, {});
+  }
+
 }
-
-
-
-

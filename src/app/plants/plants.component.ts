@@ -1,10 +1,12 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { PlantsService } from '../Services/plants.service';
+import { TrefleService } from '../Services/trefle.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Observable, Subscription } from 'rxjs';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Plot } from '../interfaces/plot';
+import { Plant } from '../interfaces/plant';
 
 @Component({
   selector: 'app-plants',
@@ -15,11 +17,22 @@ import { Plot } from '../interfaces/plot';
 })
 export class PlantsComponent {
 
-  constructor(private plantsService: PlantsService){}
-  
-    plants$ = this.plantsService.getPlants();
- 
-    addToPlot(id: Plot){
-      this.plantsService.addPlot1(id);
+  constructor(private plantsService: PlantsService, private trefleService: TrefleService){}
+
+  id = 269338;
+
+  plants$ = this.plantsService.getPlantsall();
+  trefle$ = this.trefleService.getTrefle(this.id);
+
+    @Input() value = 0;
+
+    increment(plant: Plant) {
+      plant.quantity++;
+      this.plantsService.updatePlant(plant);   
+    }
+
+    decrement(plant: Plant) {  
+      plant.quantity--;    
+      this.plantsService.updatePlant(plant);  
     }
 }

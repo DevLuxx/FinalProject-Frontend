@@ -1,12 +1,34 @@
 <h2>
-  Hey gardner, here are your available seeds.
+  Hey gardner! Here are your available seeds:
 </h2>
 <ul>
-    <li *ngFor="let plant of plants$ | async">      
-        {{ plant.plantName }}:
-        {{plant.quantity}} Seeds
-        <button (click)="addToPlot"> add to plot🪴</button>
-    </li>   
-</ul>
-  
+  @if (plants$ | async; as plants) {
+    <table border="1">
+    <th>Plant Name</th><th>Available Seeds</th>
+    @for (plant of plants; track plant.id) {
+  <tr>
+        <td>{{ plant.plantName }}</td>
+        <td>{{plant.quantity}}
+          <button (click)="increment(plant)" >➕</button>
+          <button (click)="decrement(plant)" >➖</button>
+        </td>
+  </tr>
+  }
+</table>
+  }
+
+<h2>Plant Info</h2>
+@if (trefle$ | async; as trefle) {
+  <b>Common name:</b> {{trefle.common_name}}
+  <p><b>Scientific name: </b>{{trefle.scientific_name}}</p>
+  @if (trefle.vegetable == false) {
+    <p>This is a <b>flower</b>.</p>
+  }
+  @else {
+    <p>This is a <b>vegetable</b>.</p>
+  }
+  <b>Image:</b>
+  <br>
+  <img src="{{trefle.image_url}}">
+}
 

@@ -1,5 +1,5 @@
 export interface Plant {
-    ID: number,
+    id: number,
     trefleID: number,
     plantName: string,
     quantity: number
