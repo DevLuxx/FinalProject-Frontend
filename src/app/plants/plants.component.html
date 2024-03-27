@@ -3,25 +3,31 @@
 </h2>
 <ul>
   @if (plants$ | async; as plants) {
-    <table border="1">
-    <th>Plant Name</th><th>Available Seeds</th><th>Scientific Name</th><th>Vegetable?</th><th>Image</th>
+    <table>
     @for (plant of plants; track plant.id) {
   <tr>
-        <td>{{ plant.plantName }}</td>
-        <td>{{ plant.quantity }}
-          <button (click)="increment(plant)" >➕</button>
-          <button (click)="decrement(plant)" >➖</button>
-        </td>
-        <td>{{ plant.scientificName }}</td>
-        @if (plant.vegetable == true) {
-          <td>Yes</td>
-        }
-        @else {
-          <td>No</td>
-        }
-        <td><img src={{plant.imageURL}}></td>
-
-
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{plant.commonName}}</mat-card-title>
+            <mat-card-subtitle>{{plant.scientificName}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src={{plant.imageURL}} alt="">
+          <mat-card-content>
+            <p>
+              @if(!plant.vegetable){
+            <p>this is no veggie</p>
+              }@else {
+            <p>Veggie!</p>
+              }
+              
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card>
 
 
 
@@ -32,4 +38,4 @@
   }
 </table>
   }
-
+  

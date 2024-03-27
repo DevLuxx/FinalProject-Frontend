@@ -1,8 +1,17 @@
 nav{
     display: flex;
-    gap: 1rem;
-    padding-left: 1rem;
+    gap: 4rem;
+    padding-left: 2rem;
     padding-top:0.5rem;
-    padding-bottom:0.5rem;
-    background-color: rgb(243, 243, 202);
+    padding-bottom:0.5rem;  
+   
+}
+a{
+    display: flex;
+    margin: 8px 8px 8px 0;
+    display: flex;
+    justify-content: center;
+    width: 200px;    
+    background-color: rgb(60, 121, 87);
+    font-style: normal;
 }

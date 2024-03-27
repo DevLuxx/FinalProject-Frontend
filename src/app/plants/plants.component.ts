@@ -8,11 +8,16 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Plot } from '../interfaces/plot';
 import { Plant } from '../interfaces/plant';
 import { TrefleInfo } from '../interfaces/trefle-info';
-
+import {MatFormFieldModule} from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
 @Component({
   selector: 'app-plants',
   standalone: true,
-  imports: [CommonModule, RouterModule, HttpClientModule],
+  imports: [CommonModule, RouterModule, HttpClientModule,MatFormFieldModule,MatInputModule,MatButtonModule, MatDividerModule,MatTableModule,MatCardModule],
   templateUrl: './plants.component.html',
   styleUrl: './plants.component.css'
 })

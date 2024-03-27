@@ -7,11 +7,12 @@ import { Plot } from '../interfaces/plot';
 import { Plant } from '../interfaces/plant';
 import { PlotsService } from '../Services/plots.service';
 import { FormsModule } from '@angular/forms';
-
+import {MatFormFieldModule} from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input';
 @Component({
   selector: 'app-plot-detail',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, MatFormFieldModule, MatInputModule],
   templateUrl: './plot-detail.component.html',
   styleUrl: './plot-detail.component.css'
 })
