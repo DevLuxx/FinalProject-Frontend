@@ -1,19 +1,16 @@
-import { Component, OnDestroy, OnInit, EventEmitter, Input, Output } from '@angular/core';
-import { PlantsService } from '../Services/plants.service';
-import { TrefleService } from '../Services/trefle.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { Observable, Subscription } from 'rxjs';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { Plot } from '../interfaces/plot';
-import { Plant } from '../interfaces/plant';
-import { TrefleInfo } from '../interfaces/trefle-info';
-import {MatFormFieldModule} from '@angular/material/form-field'
+import { Component, Input } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
-import {MatTableModule} from '@angular/material/table';
-import {MatCardModule} from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { RouterModule } from '@angular/router';
+import { PlantsService } from '../Services/plants.service';
+import { TrefleService } from '../Services/trefle.service';
+import { Plant } from '../interfaces/plant';
 @Component({
   selector: 'app-plants',
   standalone: true,

@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-//import { Observable, map } from 'rxjs';
+import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment.development';
 import { Plant } from '../interfaces/plant';
-import { Observable } from 'rxjs';
 
 
 @Injectable({

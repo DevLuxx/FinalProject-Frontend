@@ -1,13 +1,29 @@
 <h1>Gardner's Journal</h1>
 <h2>Keep track of your progress here.</h2>
 
-@if ($journals | async; as Journal) {
-    <ul>
-      @for (journal of Journal; track journal.date) {
+<div>
+  <label>Date:</label>
+  <input type="date" [(ngModel)]="newJournal.date">
+</div>
+<div>
+  <label>Gardener:</label>
+  <input type="text" [(ngModel)]="newJournal.gardener">
+</div>
+<div>
+  <label>Notes:</label>
+  <textarea [(ngModel)]="newJournal.notes"></textarea>
+</div>
+<button (click)="createJournal()">Create Entry</button>
 
-        <li> {{journal.date}} </li>
-        <li> {{journal.gardener}} </li>
-        <li> {{journal.notes}} </li>
-  }
+<hr>
+
+<h2>Journal Entries</h2>
+
+<ul *ngIf="journals$ | async as journals">
+  <li *ngFor="let journal of journals">
+    <span>Date: {{ journal.date }}</span><br>
+    <span>Gardener: {{ journal.gardener }}</span><br>
+    <span>Notes: {{ journal.notes }}</span>
+    <button (click)="deleteJournal(journal.id)">Delete</button>
+  </li>
 </ul>
-}

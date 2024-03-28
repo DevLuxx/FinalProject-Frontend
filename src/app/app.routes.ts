@@ -8,8 +8,5 @@ export const routes: Routes = [
     { path: 'plants', component: PlantsComponent },
     { path: 'plots', component: DisplayPlotsComponent },
     { path: 'journal', component: JournalComponent },
-    {
-        path: 'plotitem/:id',
-        component: PlotDetailComponent
-    },
+    { path: 'plotitem/:id', component: PlotDetailComponent },
 ];

@@ -1,14 +1,13 @@
-import { Component, OnInit, importProvidersFrom, numberAttribute } from '@angular/core';
-import { PlantsService } from '../Services/plants.service';
-import { TrefleService } from '../Services/trefle.service';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { Plot } from '../interfaces/plot';
-import { Plant } from '../interfaces/plant';
+import { PlantsService } from '../Services/plants.service';
 import { PlotsService } from '../Services/plots.service';
-import { FormsModule } from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field'
-import { MatInputModule } from '@angular/material/input';
+import { TrefleService } from '../Services/trefle.service';
+import { Plant } from '../interfaces/plant';
 @Component({
   selector: 'app-plot-detail',
   standalone: true,
