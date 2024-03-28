@@ -16,7 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class JournalComponent {
 
-  constructor(private journalService: JournalService){}
+  constructor(private router: Router, private journalService: JournalService){}
 
   $journals = this.journalService.getJournalsall();
 
