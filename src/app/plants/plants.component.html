@@ -16,16 +16,19 @@
           <mat-card-content>
             <p>
               @if(!plant.vegetable){
-            <p>this is no veggie</p>
+            <p>this is not a vegetable</p>
               }@else {
-            <p>Veggie!</p>
-              }
+            <p>This is a vegetable</p>
+              }  
               
             </p>
           </mat-card-content>
+          <p>
+            Seed Quantity:{{plant.quantity}}
+          </p>
           <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
+            <button mat-button (click)="increment(plant)">➕</button>
+            <button mat-button (click)="decrement(plant)">➖</button>
           </mat-card-actions>
         </mat-card>
 
