@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { PlantsService } from '../Services/plants.service';
 import { PlotsService } from '../Services/plots.service';
-import { Plot } from '../interfaces/plot';
-import { BrowserModule } from '@angular/platform-browser';
-import { Router, RouterModule } from '@angular/router';
 
 
 @Component({
