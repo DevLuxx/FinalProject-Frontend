@@ -1,4 +1,4 @@
-<h2>Choose what you'd like to routeToPlotItem!</h2>
+<h2>Here are all your plants! You're doing great!</h2>
 
 <main>
 	<table>
@@ -11,7 +11,7 @@
 				@for (plotItem of plots | slice: 0 :5; track plotItem.id) 
 				{
 					<td>
-						<span></span>{{ plotItem.plantName }}<br>
+						<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
 						<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 					</td>
 				}
@@ -20,7 +20,7 @@
 				@for (plotItem of plots | slice: 5 :10; track plotItem.id) 
 				{
 					<td>
-						<span></span>{{ plotItem.plantName }}<br>
+						<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
 						<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 					</td>
 				}
@@ -29,7 +29,7 @@
 				@for (plotItem of plots | slice: 10 :15; track plotItem.id) 
 				{
 					<td>
-						<span></span>{{ plotItem.plantName }}<br>
+						<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
 						<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 					</td>
 				}
@@ -38,7 +38,7 @@
 				@for (plotItem of plots | slice: 15 :20; track plotItem.id) 
 				{
 					<td>
-						<span></span>{{ plotItem.plantName }}<br>
+						<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
 						<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 					</td>
 				}
@@ -56,7 +56,7 @@
 				@for (plotItem of plots | slice: 20 :25; track plotItem.id) 
 				{
 					<td>
-						<span></span>{{ plotItem.plantName }}<br>
+						<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
 						<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 					</td>
 				}
@@ -65,7 +65,7 @@
 			@for (plotItem of plots | slice: 25 :30; track plotItem.id) 
 			{
 				<td>
-					<span></span>{{ plotItem.plantName }}<br>
+					<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
 					<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 				</td>
 			}
@@ -74,7 +74,7 @@
 			@for (plotItem of plots | slice: 30 :35; track plotItem.id) 
 			{
 				<td>
-					<span></span>{{ plotItem.plantName }}<br>
+					<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
 					<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 				</td>
 			}
@@ -83,7 +83,7 @@
 			@for (plotItem of plots | slice: 35 :40; track plotItem.id) 
 			{
 				<td>
-					<span></span>{{ plotItem.plantName }}<br>
+					<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
 					<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 				</td>
 			}
@@ -101,7 +101,7 @@
 				@for (plotItem of plots | slice: 40 :45; track plotItem.id) 
 				{
 					<td>
-						<span></span>{{ plotItem.plantName }}<br>
+						<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
 						<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 					</td>
 				}
@@ -110,7 +110,7 @@
 			@for (plotItem of plots | slice: 45 :50; track plotItem.id) 
 			{
 				<td>
-					<span></span>{{ plotItem.plantName }}<br>
+					<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
 					<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 				</td>
 			}
@@ -119,7 +119,7 @@
 			@for (plotItem of plots | slice: 50 :55; track plotItem.id) 
 			{
 				<td>
-					<span></span>{{ plotItem.plantName }}<br>
+					<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
 					<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 				</td>
 			}
@@ -128,7 +128,7 @@
 			@for (plotItem of plots | slice: 55 :60; track plotItem.id) 
 			{
 				<td>
-					<span></span>{{ plotItem.plantName }}<br>
+					<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
 					<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 				</td>
 			}
