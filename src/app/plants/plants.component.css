@@ -1,14 +1,17 @@
 *{
-    display: inline-block;
+    display: inline-table;
     
 }
 img{
     height: 300px;
     width: 300px;
 }
+table{
+   
+}
 h2 { 
-    display: flex;
-    
+    justify-content: center;
+    display: flex;  
     color: #7c795d; 
     font-family: 'Source Sans Pro', sans-serif; 
     font-size: 28px; 
@@ -17,30 +20,27 @@ h2 {
     margin: 0 0 24px;
  }
  button {   
+   
     font-size: 8px;
     margin: 8px 8px 8px 0;
-    background-color: rgb(62, 62, 62);
-        
- }
- table{
-    
-    font-size: medium;   
+    background-color: rgb(255, 250, 250);       
  }
  tr{
+   justify-content: center;
     font-family: 'Source Sans Pro', sans-serif;
+    color: aliceblue;
  }
- .example-card {
+.example-card {
        
     gap: 1rem;
     margin-bottom: 15px;
     margin-right: 15px;
     margin-left: 15px;
     max-width: 500px;
-    background-color: rgb(120, 144, 115);    
+    background-color: #3a5639;    
   }
   
   .example-header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-    
+    background-size: cover;    
   }
