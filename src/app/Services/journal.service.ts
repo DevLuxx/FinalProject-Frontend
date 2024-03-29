@@ -24,4 +24,8 @@ export class JournalService {
   postJournal(newJournal: Journal): Observable<Journal> {
     return this.httpClient.post<Journal>(this.journalAPI, newJournal);
   }
+
+  deleteJournal(id: number): Observable<Journal> {
+    return this.httpClient.delete<Journal>(`${this.journalAPI}/${id}`);
+  }
 }
