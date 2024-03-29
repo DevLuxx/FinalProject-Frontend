@@ -1,5 +1,3 @@
-import { Component, OnDestroy, OnInit, EventEmitter, Input, Output } from '@angular/core';
-import { JournalService } from '../Services/journal.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Observable, Subscription } from 'rxjs';
@@ -8,6 +6,8 @@ import { Journal } from '../interfaces/journal';
 import {MatFormFieldModule} from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
+import { Component } from '@angular/core';
+import { JournalService } from '../Services/journal.service';
 
 @Component({
   selector: 'app-journal',
