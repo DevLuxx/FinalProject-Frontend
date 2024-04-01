@@ -5,11 +5,16 @@ main {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: blue;
+    font-size: 1rem;
+    text-decoration: underline;
 }
+
 button {
     float: right;
 }
+
+
 .card{
     font-family: Courier, monospace;
     background-color: white;
