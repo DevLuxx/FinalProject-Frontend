@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { PlantsService } from '../Services/plants.service';
 import { PlotsService } from '../Services/plots.service';
-
-
+import {MatTabsModule} from '@angular/material/tabs';
+import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-display-plots',
   standalone: true,
 
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MatTabsModule,MatButtonModule],
 
   templateUrl: './display-plots.component.html',
   styleUrl: './display-plots.component.css'
