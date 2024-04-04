@@ -20,7 +20,7 @@ export class JournalComponent {
 
   constructor(private router: Router, private journalService: JournalService){}
 
-  $journals = this.journalService.getJournalsall();
+  journals$ = this.journalService.getJournalsall();
 
   journalItem = {
     id: 0,
@@ -30,7 +30,7 @@ export class JournalComponent {
 
   deleteJournal(id: number){
     this.journalService.deleteJournal(id).subscribe(() => {
-     this.$journals = this.journalService.getJournalsall();
+     this.journals$ = this.journalService.getJournalsall();
     });
   }
 

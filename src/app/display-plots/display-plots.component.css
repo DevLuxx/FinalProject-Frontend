@@ -25,6 +25,7 @@ th {
     text-align: center;
     font-size: 20px;
   }
+
 ::ng-deep .mdc-tab.mdc-tab--active{
     background-color: rgb(255, 255, 255) !important;
     font-weight: 900;
@@ -36,3 +37,8 @@ th {
 ::ng-deep .mat-mdc-tab .mdc-tab__text-label {
   color: black !important;
 }
+
+  main {
+    height: 100%;
+  }
+
