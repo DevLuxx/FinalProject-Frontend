@@ -1,5 +1,9 @@
-<main>
-	<h2>Here are all your plants! You're doing great!</h2>
+
+<h2>Here are all your plants! You're doing great!</h2>
+
+<mat-tab-group>
+	<mat-tab label="Plot One"> 
+
 	<table>
 		<tr>
 			<th colspan="5">Garden Plot 1</th>
@@ -11,7 +15,7 @@
 				{
 					<td>
 						<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
-						<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
+						<button mat-button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 					</td>
 				}
 			</tr>
@@ -20,16 +24,16 @@
 				{
 					<td>
 						<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
-						<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
+						<button mat-button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 					</td>
 				}
 			</tr>
 			<tr>
-				@for (plotItem of plots | slice: 10 :15; track plotItem.id) 
+				@for (plotItem of plots | slice: 5 : 10; track plotItem.id) 
 				{
 					<td>
 						<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
-						<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
+						<button mat-button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 					</td>
 				}
 			</tr>
@@ -38,13 +42,14 @@
 				{
 					<td>
 						<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
-						<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
+						<button mat-button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 					</td>
 				}
 			</tr>
 		}
 	</table>
-	
+</mat-tab>
+<mat-tab label="Plot Two"> 
 	<table>
 		<tr>
 			<th colspan="5">Garden Plot 2</th>
@@ -56,7 +61,7 @@
 				{
 					<td>
 						<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
-						<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
+						<button mat-button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 					</td>
 				}
 			</tr>
@@ -65,7 +70,7 @@
 			{
 				<td>
 					<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
-					<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
+					<button mat-button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 				</td>
 			}
 		</tr>
@@ -74,7 +79,7 @@
 			{
 				<td>
 					<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
-					<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
+					<button mat-button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 				</td>
 			}
 		</tr>
@@ -83,13 +88,14 @@
 			{
 				<td>
 					<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
-					<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
+					<button mat-button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 				</td>
 			}
 		</tr>
 	}
 	</table>
-	
+</mat-tab>
+<mat-tab label="Plot Three"> 
 	<table>
 		<tr>
 			<th colspan="5">Garden Plot 3</th>
@@ -101,7 +107,7 @@
 				{
 					<td>
 						<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
-						<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
+						<button mat-button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 					</td>
 				}
 			</tr>
@@ -110,7 +116,7 @@
 			{
 				<td>
 					<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
-					<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
+					<button mat-button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 				</td>
 			}
 		</tr>
@@ -119,7 +125,7 @@
 			{
 				<td>
 					<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
-					<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
+					<button mat-button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 				</td>
 			}
 		</tr>
@@ -128,10 +134,11 @@
 			{
 				<td>
 					<span></span>{{plotItem.plotSpace}}. {{ plotItem.plantName }}<br>
-					<button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
+					<button mat-button (click)="routeToPlotItem(plotItem.id)">Update🌱</button>
 				</td>
 			}
 		</tr>
 	}
 	</table>
-</main>
+</mat-tab>
+</mat-tab-group>
